@@ -114,7 +114,7 @@ class _CarState extends State<Car> {
                    const SizedBox(width: 20,),
                           GestureDetector(
                             onTap: () {
-                              Navigator.of(context).pushNamed('/car');
+                              Navigator.of(context).pushNamed('/final');
                             },
                             child: Padding(
                               padding:const EdgeInsets.all(20),

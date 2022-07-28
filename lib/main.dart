@@ -1,4 +1,5 @@
 import 'package:devnology_test/features/car/car.dart';
+import 'package:devnology_test/features/final/final.dart';
 import 'package:devnology_test/features/home.dart/home.dart';
 import 'package:devnology_test/features/splash/splash.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/':(context)=>const Splash(),
         '/home':(context)=>const Home(),
         '/car':(context)=>const Car(),
+        '/final':(context) => const Final()
       },
       title: 'Flutter Demo',
       theme: ThemeData(
