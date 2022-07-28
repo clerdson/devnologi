@@ -15,11 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+    
       initialRoute: '/',
       routes: {
         '/':(context)=>const Splash(),
-        '/home':(context)=>const Home(),
-        '/car':(context)=>const Car(),
+        '/home':(context)=>Home(selectedIndex: 0,),
+        '/car':(context)=> Car(),
         '/final':(context) => const Final()
       },
       title: 'Flutter Demo',
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(color: const Color.fromARGB(255, 34, 32, 45),),
         primarySwatch: Colors.blue,
       bottomAppBarColor:  const Color.fromARGB(255, 34, 32, 45), 
+      bottomAppBarTheme: BottomAppBarTheme(color:  const Color.fromARGB(255, 34, 32, 45), )
       ),
       
     

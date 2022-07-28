@@ -127,36 +127,26 @@ class _CarState extends State<Car> {
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
                   ),
-                         Row(children: [
-                      GestureDetector(
-                        onTap: (){
-                          _increment();
-                        },
-                        child: Container(
-                        width: 30,
-                        height: 30,
-                          decoration: BoxDecoration(
-                              color: Colors.black,
-                            borderRadius: BorderRadius.circular(50)
-                          ),
-                          child: Center(child: Icon(Icons.add,color: Colors.white,)),
+                      Row(children: [
+                      Container(
+                      width: 30,
+                      height: 30,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                          borderRadius: BorderRadius.circular(50)
                         ),
+                        child: Center(child: Icon(Icons.add,color: Colors.white,)),
                       ),
-                      Text(conterCount.toString()),
-                          GestureDetector(
-                            onTap: (){
-                              _dicrement();
-                            },
-                            child: Container(
-                                                width: 30,
-                                                height: 30,
-                                                  decoration: BoxDecoration(
-                              color: Colors.black,
-                            borderRadius: BorderRadius.circular(50)
-                                                  ),
-                                                  child:Center(child: Icon(Icons.remove,color: Colors.white,)),
-                                                ),
-                          )
+                      Text('1'),
+                          Container(
+                      width: 30,
+                      height: 30,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                          borderRadius: BorderRadius.circular(50)
+                        ),
+                        child:Center(child: Icon(Icons.remove,color: Colors.white,)),
+                      )
                     ],)
                 ],
               ),
@@ -231,6 +221,7 @@ class _CarState extends State<Car> {
           ),
         ],
       ),
+      
     );
   }
 }

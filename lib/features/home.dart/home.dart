@@ -4,18 +4,21 @@ import 'package:devnology_test/features/next/next.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  late int selectedIndex =0;
+   Home({Key? key,required this.selectedIndex}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
+  
   bool visible = true;
+  bool visibleappbar = false;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
+   // ignore: prefer_final_fields
+   List<Widget> _widgetOptions = <Widget>[
     Next(),
     Detail(),
     Car(),
@@ -23,10 +26,11 @@ class _HomeState extends State<Home> {
   ];
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
-      if(_selectedIndex ==1){
+    widget.selectedIndex = index;
+      if(widget.selectedIndex ==1){
         visible = false;
       }
+    
     });
   }
 
@@ -40,7 +44,7 @@ class _HomeState extends State<Home> {
             'Logo.png',
             width: 200,
           ),
-          actions: _selectedIndex == 0
+          actions: widget.selectedIndex == 0
               ? [
                   IconButton(
                     icon: const Icon(
@@ -67,12 +71,15 @@ class _HomeState extends State<Home> {
                   ),
                 ]),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: _widgetOptions.elementAt(widget.selectedIndex),
       ),
       bottomNavigationBar: AnimatedContainer(
+        
           duration: Duration(milliseconds: 500),
           child: visible
-              ? BottomNavigationBar(
+              ?  BottomNavigationBar(
+              
+                
                   items: <BottomNavigationBarItem>[
                     BottomNavigationBarItem(
                       icon: Icon(
@@ -114,13 +121,14 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       label: 'Notifications',
+                        backgroundColor: Color.fromARGB(255, 34, 32, 45),
                     ),
                     BottomNavigationBarItem(
                       icon: Icon(Icons.menu),
                       label: 'School',
                     ),
                   ],
-                  currentIndex: _selectedIndex,
+                  currentIndex: widget.selectedIndex,
                   selectedItemColor: Colors.white,
                   onTap: _onItemTapped,
                 )

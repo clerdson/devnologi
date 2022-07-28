@@ -1,3 +1,4 @@
+import 'package:devnology_test/features/home.dart/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -129,7 +130,10 @@ class _DetailState extends State<Detail> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).pushNamed('/car');
+                             Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Home(selectedIndex: 2,)),
+  );
                           },
                           child: Padding(
                             padding:const EdgeInsets.all(20),
