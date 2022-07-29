@@ -67,7 +67,10 @@ flutter:
     - Vector.png
     - Vector2.png
     - Groupfinal.png
-    
+    - Group1.png
+    - Group2.png
+    - Group3.png
+    - Group4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
