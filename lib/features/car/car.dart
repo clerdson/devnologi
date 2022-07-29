@@ -52,7 +52,7 @@ class _CarState extends State<Car> {
                 width: 10,
               ),
               SizedBox(
-                width: 250,
+                width: 190,
                 height: 130,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +113,7 @@ class _CarState extends State<Car> {
               width: 10,
             ),
             SizedBox(
-              width: 250,
+              width: 190,
               height: 130,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -159,6 +159,7 @@ class _CarState extends State<Car> {
                 height: 100,
                 color: Colors.grey[700],
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
@@ -188,7 +189,7 @@ class _CarState extends State<Car> {
                         Navigator.of(context).pushNamed('/final');
                       },
                       child: Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: EdgeInsets.only(left:MediaQuery.of(context).size.width*0.07),
                         child: Container(
                           padding: const EdgeInsets.only(top: 7, left: 15),
                           width: 150,

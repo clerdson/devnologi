@@ -102,13 +102,14 @@ class _DetailState extends State<Detail> {
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
                   child: Container(
+                  alignment: Alignment.center,
                     height: 100,
                     color: Colors.grey[700],
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.all(20),
-                          child: Container(
+                      
+                           Container(
                               padding: EdgeInsets.only(top: 7, left: 15),
                               width: 150,
                               height: 40,
@@ -127,7 +128,8 @@ class _DetailState extends State<Detail> {
                                   Image.asset('Vector.png'),
                                 ],
                               )),
-                        ),
+                              
+                        
                         GestureDetector(
                           onTap: () {
                              Navigator.push(
@@ -136,7 +138,8 @@ class _DetailState extends State<Detail> {
   );
                           },
                           child: Padding(
-                            padding:const EdgeInsets.all(20),
+                            
+                        padding: EdgeInsets.only(left:MediaQuery.of(context).size.width*0.07),
                             child: Container(
                               padding:const EdgeInsets.only(top: 7, left: 15),
                               width: 150,
