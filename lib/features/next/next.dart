@@ -15,7 +15,10 @@ class Next extends StatefulWidget {
 class _NextState extends State<Next> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Container(
+      padding: const EdgeInsets.only(left: 30,right: 30),
+  child:  SingleChildScrollView(
+    child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:  [
             const SizedBox(
@@ -42,16 +45,16 @@ class _NextState extends State<Next> {
               'Latest',
               style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 30),
             ),
-           const SizedBox(
-              width: 700,
+          SizedBox(
+              width: MediaQuery.of(context).size.width * 1.65,
               height: 200,
               child: HStack2(),
             ),
-              const SizedBox(
-              width: 700,
+               SizedBox(
+              width:  MediaQuery.of(context).size.width * 1.65,
               height: 150,
               child: HStack3(),
-            )]);
+            )])));
  
   }
 }
